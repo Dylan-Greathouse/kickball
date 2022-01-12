@@ -6,7 +6,7 @@ import { getTeamById } from "../../services/utils/teams";
 
 export const TeamDetail = () => {
     const { id } = useParams()
-    const[team, setTeam] = useState(null)
+    const [team, setTeam] = useState('')
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export const TeamDetail = () => {
         <ul>
             {team.players.map((player) => {
             return (
-            <h3 key={player.id}>{player.position}: {player.name}</h3>
+            <li key={player.id}>{player.position}: {player.name}</li>
           );
         })}
       </ul>

@@ -5,6 +5,10 @@ import { PlayerList } from './views/PlayerList/PlayerList'
 import { PlayerDetail } from './views/PlayerDetail/PlayerDetail'
 import { Home } from './views/Home/Home';
 import { Header } from './views/Header/Header.jsx'
+import { CreateTeam } from './views/TeamList/CreateTeam'
+import { UpdateTeam } from './views/TeamList/UpdateTeam'
+import { CreatePlayer } from './views/PlayerList/CreatePlayer'
+import { UpdatePlayer } from './views/PlayerList/UpdatePlayer'
 
 
 function App() {
@@ -15,6 +19,10 @@ function App() {
     </header>
 
     <Switch>
+        <Route path="/teams/new" exact component={CreateTeam} />
+        <Route path="/teams/:id/update" exact component={UpdateTeam} />
+        <Route path="/players/new" exact component={CreatePlayer} />
+        <Route path="/players/:id/update" exact component={UpdatePlayer}/>
         <Route path="/" exact component={Home} />
         <Route path="/teamlist" exact component={TeamList} />
         <Route path="/teams/:id" exact component={TeamDetail} />
