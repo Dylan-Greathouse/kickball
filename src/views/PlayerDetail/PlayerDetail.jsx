@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from "react-router-dom"
-import { getPlayerById } from "../../services/players"
+import { getPlayerById } from "../../services/utils/players"
 
 export const PlayerDetail = () => {
     const{ id } = useParams()
@@ -29,3 +29,5 @@ export const PlayerDetail = () => {
         </div>
     )
 }
+
+export default PlayerDetail;

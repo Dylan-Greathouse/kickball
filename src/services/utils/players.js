@@ -1,4 +1,4 @@
-import { client, parseData } from './client';
+import { client, parseData } from '../client';
 
 export async function getPlayers() {
   const request = await client.from('players').select().order('name');
